@@ -1,7 +1,9 @@
 package automation.find2ndProduct;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -12,8 +14,13 @@ import automation.pageObject.Pages;
 public class FindProductsTest {
 	
 	@BeforeClass
-	public static void setup() {
+	public static void init() {
 		System.setProperty("webdriver.chrome.driver","../chromedriver");
+	}
+	
+	@Before
+	public void setup() {
+		Browser.create();
 	}
 	
 	@Test
@@ -46,6 +53,11 @@ public class FindProductsTest {
 	public void SecondProductShouldHaveAtLeastOneItem() {
 		this.canGoTo2ndResultsPage();
 		
+	}
+	
+	@After
+	public void tearDown() {
+		Browser.close();
 	}
 	
 	@AfterClass

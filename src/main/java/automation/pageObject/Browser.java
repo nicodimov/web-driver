@@ -9,8 +9,12 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Browser {
 	
-//	static WebDriver driver = new FirefoxDriver();
-	static WebDriver driver = new ChromeDriver();
+	static WebDriver driver;
+	
+	public static void create() {
+		driver = new ChromeDriver();
+//		driver = new FirefoxDriver();
+	}
 	
 	public static void goTo(String url) {
 		driver.get(url);
