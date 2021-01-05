@@ -13,8 +13,7 @@ public class AliExpressProductSearch {
 		aliexpressHome.goTo();
 		aliexpressHome.waitUntilLoadComplete();
 		aliexpressHome.tryClosePopup();
-		
-
+	
 	}
 
 }
