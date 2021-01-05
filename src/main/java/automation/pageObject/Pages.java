@@ -20,5 +20,11 @@ public class Pages {
 		PageFactory.initElements(Browser.driver, resultPage);
 		return resultPage;
 	}
+
+	public static ProductPage productPage() {
+		ProductPage prodPage = new ProductPage();
+		PageFactory.initElements(Browser.driver, prodPage);
+		return prodPage;
+	}
 	
 }

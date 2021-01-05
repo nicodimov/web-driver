@@ -50,18 +50,21 @@ public class FindProductsTest {
 	}
 	
 	@Test
-	public void SecondProductShouldHaveAtLeastOneItem() {
+	public void SecondProductShouldHaveAtLeastOneItem() throws InterruptedException {
 		this.canGoTo2ndResultsPage();
-		
+		Pages.resultsPage().clickNthResult(2);
+		Browser.switchToTab(1);
+		Integer available = Pages.productPage().getAvaliableItems();
+		Assert.assertTrue(available > 1);
 	}
 	
 	@After
 	public void tearDown() {
 		Browser.close();
 	}
-	
-	@AfterClass
-	public static void cleanUp() {
-		Browser.close();
-	}
+
+//	@AfterClass
+//	public static void cleanUp() {
+//		Browser.close();
+//	}
 }
