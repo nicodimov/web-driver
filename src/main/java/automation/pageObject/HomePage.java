@@ -10,19 +10,19 @@ public class HomePage {
 
 	static String url = "http://www.aliexpress.com";
 	static String title = "AliExpress - Online Shopping for Popular Electronics, Fashion, Home & Garden, Toys & Sports, Automobiles and More products - AliExpress";
-	
+
 	@FindBy(how = How.XPATH, using = "/html/body/section/div/div/div/div/div[2]/div/div/img")
 	WebElement advDialogButton;
-	
+
 	@FindBy(how = How.XPATH, using = "/html/body/iframe[2]")
 	WebElement advIframe;
-	
+
 	@FindBy(how = How.ID, using = "search-key")
 	WebElement searchBox;
-	
-	@FindBy(how = How.CSS, using = "search-button")
+
+	@FindBy(how = How.CLASS_NAME, using = "search-button")
 	WebElement searchButton;
-	
+
 	public void goTo() {
 		Browser.goTo(url);
 	}
@@ -30,11 +30,15 @@ public class HomePage {
 	public boolean isAt() {
 		return Browser.title().equals(title);
 	}
-	
+
 	public void tryClosePopup() {
-		WebDriverWait wait = new WebDriverWait(Browser.driver, 10);
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(this.advIframe));
-		wait.until(ExpectedConditions.elementToBeClickable(this.advDialogButton)).click();
+		try {
+			WebDriverWait wait = new WebDriverWait(Browser.driver, 10);
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(this.advIframe));
+			wait.until(ExpectedConditions.elementToBeClickable(this.advDialogButton)).click();
+		} catch (Exception e) {
+			System.out.println("Cannot close dialog: " + e.getMessage());
+		}
 	}
 
 	public void waitUntilLoadComplete() {

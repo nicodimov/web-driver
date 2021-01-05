@@ -6,13 +6,23 @@ import org.openqa.selenium.support.How;
 
 public class ResultsPageNavigator {
 
-	@FindBy(how = How.CSS, using = "button.next-pagination-item:nth-child(2)")
+	@FindBy(how = How.CSS, using = ".next-current")
 	WebElement currentPage;
+	
+	@FindBy(how = How.CSS, using = ".next-btn.next-medium.next-btn-normal.next-pagination-item.next-next")
+	WebElement nextButton;
+	
 	
 	public String getSelectedPageNumber() {
 		return currentPage.getText();
 		
 	}
+
+	public void clickNextButton() {
+		this.nextButton.click();
+	}
+	
+
 
 	
 }

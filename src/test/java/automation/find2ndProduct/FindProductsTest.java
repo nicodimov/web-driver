@@ -2,7 +2,6 @@ package automation.find2ndProduct;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -27,15 +26,17 @@ public class FindProductsTest {
 	}
 	
 	@Test
-	public void searchProduct() {
+	public void canSearchProduct() {
 		this.canGoToHomePage();
 		Pages.homePage().doSearch("iphone");
 		Pages.resultsPage().tryClosePopup();
+		Assert.assertTrue(Pages.resultsPage().isListTypeButtonPresent());
 	}
 	
 	@Test
 	public void canGoTo2ndResultsPage() {
-		this.searchProduct();
+		this.canSearchProduct();
+		Pages.resultsPage().navigateBottom();
 		Pages.resultsPage().navigateToNextPage();
 		String pageNumber = Pages.resultsPage().getPageNavigator().getSelectedPageNumber();
 		Assert.assertEquals("2", pageNumber);

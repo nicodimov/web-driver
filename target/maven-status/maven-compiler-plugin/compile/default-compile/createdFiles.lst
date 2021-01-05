@@ -1,0 +1,6 @@
+automation/pageObject/Pages.class
+automation/pageObject/ResultsPage.class
+automation/pageObject/ResultsPageNavigator.class
+automation/pageObject/HomePage.class
+automation/AliExpressProductSearch.class
+automation/pageObject/Browser.class
