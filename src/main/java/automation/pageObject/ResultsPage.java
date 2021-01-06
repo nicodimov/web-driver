@@ -38,6 +38,7 @@ public class ResultsPage {
 	}
 	
 	public void navigateToNextPage() {
+		Browser.driver.switchTo().parentFrame();
 		this.getPageNavigator().clickNextButton();
 	}
 

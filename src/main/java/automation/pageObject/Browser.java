@@ -54,12 +54,16 @@ public class Browser {
 	}
 
 	public static void navigateBottom() throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(2000);
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, (document.body.scrollHeight - 2000));");
 	}
 
 	public static void switchToTab(int tabNumber) {
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(tabs.get(tabNumber));
+		driver.switchTo().window(tabs.get(tabNumber).toString());
+	}
+	
+	public static void switchToActiveTab() {
+		driver.switchTo().defaultContent();
 	}
 }
