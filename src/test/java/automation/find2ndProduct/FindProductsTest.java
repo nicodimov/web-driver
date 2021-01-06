@@ -15,7 +15,7 @@ public class FindProductsTest {
 	
 	@BeforeClass
 	public static void init() {
-		System.setProperty("webdriver.chrome.driver","../chromedriver");
+		System.setProperty("webdriver.chrome.driver","chromedriver");
 	}
 	
 	@Before
