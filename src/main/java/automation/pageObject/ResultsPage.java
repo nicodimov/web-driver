@@ -25,7 +25,6 @@ public class ResultsPage {
 	WebElement priceText; 
 	
 	@FindBy(how = How.CSS, using = ".list-items > div:nth-child(1) > li:nth-child(2)")
-	
 	ResultsPageNavigator pageNavigator;
 	
 	
@@ -57,10 +56,6 @@ public class ResultsPage {
 			System.out.println("Cannot close dialog: " + e.getMessage());
 		}
 		return false;
-	}
-
-	public void navigateBottom() {
-		Browser.scrollElement(bottomText);
 	}
 
 	public void clickNthResult(int order) throws InterruptedException {

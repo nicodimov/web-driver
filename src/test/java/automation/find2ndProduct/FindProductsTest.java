@@ -6,9 +6,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.remote.BrowserType;
 
 import automation.pageObject.Browser;
-import automation.pageObject.HomePage;
 import automation.pageObject.Pages;
 
 public class FindProductsTest {
@@ -20,42 +20,57 @@ public class FindProductsTest {
 	
 	@Before
 	public void setup() {
-		Browser.create();
+		Browser.create(BrowserType.GOOGLECHROME);
 	}
 	
 	@Test
 	public void canGoToHomePage() {
-		HomePage aliexpressHome = Pages.homePage();
-		aliexpressHome.goTo();
-		aliexpressHome.waitUntilLoadComplete();
-		aliexpressHome.tryClosePopup();
-		Assert.assertTrue(Pages.homePage().isAt());
+		try {
+			Pages.homePage().goTo();
+			Pages.homePage().waitUntilLoadComplete();
+			Pages.homePage().tryClosePopup();
+			Assert.assertTrue(Pages.homePage().isAt());
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
 	}
 	
 	@Test
 	public void canSearchProduct() {
-		this.canGoToHomePage();
-		Pages.homePage().doSearch("iphone");
-		Pages.resultsPage().tryClosePopup();
-		Assert.assertTrue(Pages.resultsPage().isListTypeButtonPresent());
+		try {
+			this.canGoToHomePage();
+			Pages.homePage().doSearch("iphone");
+			Pages.resultsPage().tryClosePopup();
+			Assert.assertTrue(Pages.resultsPage().isListTypeButtonPresent());
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
 	}
 	
 	@Test
 	public void canGoTo2ndResultsPage() {
-		this.canSearchProduct();
-		Pages.resultsPage().navigateBottom();
-		Pages.resultsPage().navigateToNextPage();
-		String pageNumber = Pages.resultsPage().getPageNavigator().getSelectedPageNumber();
-		Assert.assertEquals("2", pageNumber);
+		try {
+			this.canSearchProduct();
+			Browser.navigateBottom();
+			Pages.resultsPage().navigateToNextPage();
+			String pageNumber = Pages.resultsPage().getPageNavigator().getSelectedPageNumber();
+			Assert.assertEquals("2", pageNumber);
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
 	}
 	
 	@Test
-	public void SecondProductShouldHaveAtLeastOneItem() throws InterruptedException {
-		this.canGoTo2ndResultsPage();
-		Pages.resultsPage().clickNthResult(2);
-		Browser.switchToTab(1);
-		Integer available = Pages.productPage().getAvaliableItems();
-		Assert.assertTrue(available > 1);
+	public void SecondProductShouldHaveAtLeastOneItem() {
+		try {
+			this.canGoTo2ndResultsPage();
+			Pages.resultsPage().clickNthResult(2);
+			Browser.switchToTab(1);
+			Integer available = Pages.productPage().getAvaliableItems();
+			Assert.assertTrue(available > 1);
+		} catch (Exception e) {
+			Assert.fail(e.getMessage());
+		}
 	}
 	
 	@After

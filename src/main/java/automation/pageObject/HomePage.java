@@ -41,11 +41,13 @@ public class HomePage {
 		}
 	}
 
-	public void waitUntilLoadComplete() {
+	public void waitUntilLoadComplete() throws InterruptedException {
 		Browser.waitForPageLoad();
+		Thread.sleep(1000);
 	}
 
 	public void doSearch(String searchText) {
+		Browser.driver.switchTo().parentFrame();
 		this.searchBox.sendKeys(searchText);
 		this.searchButton.click();
 	}
