@@ -63,8 +63,12 @@ public class FindProductsTest {
 		Browser.close();
 	}
 
-//	@AfterClass
-//	public static void cleanUp() {
-//		Browser.close();
-//	}
+	@AfterClass
+	public static void cleanUp() {
+		try {
+			Browser.close();
+		} catch (Exception e) {
+			// do nothing
+		}
+	}
 }
