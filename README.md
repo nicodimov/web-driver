@@ -7,8 +7,9 @@ Chromedriver and geckodriver must be located in the same directory where maven c
 To run the tests execute the following command: 
 
 ```
-mvn clean install
+mvn clean install -Dbrowser-ut=<browserToTest>
 ```
+Where browserToTest can take 'firefox' or 'googlechrome' values. If property is not present the default value is 'googlechrome'
 
 ## Versions
 

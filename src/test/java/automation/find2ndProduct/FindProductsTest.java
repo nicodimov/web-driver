@@ -21,7 +21,9 @@ public class FindProductsTest {
 	
 	@Before
 	public void setup() {
-		Browser.create(BrowserType.FIREFOX);
+		String browser = System.getProperty("browser-ut");
+		if(browser == null || !browser.isEmpty()) browser = BrowserType.GOOGLECHROME;
+		Browser.create(browser);
 	}
 	
 	@Test
