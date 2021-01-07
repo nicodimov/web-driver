@@ -68,7 +68,6 @@ public class FindProductsTest {
 		try {
 			this.canGoTo2ndResultsPage();
 			Pages.resultsPage().clickNthResult(2);
-//			if(Browser.selectedBrowser == BrowserType.FIREFOX) Browser.close();
 			Browser.switchToDefaultContet();
 			Browser.switchToActiveElement();
 			Browser.switchToTab(1);
