@@ -16,11 +16,12 @@ public class FindProductsTest {
 	@BeforeClass
 	public static void init() {
 		System.setProperty("webdriver.chrome.driver","chromedriver");
+		System.setProperty("webdriver.gecko.driver", "geckodriver");
 	}
 	
 	@Before
 	public void setup() {
-		Browser.create(BrowserType.GOOGLECHROME);
+		Browser.create(BrowserType.FIREFOX);
 	}
 	
 	@Test
@@ -31,6 +32,7 @@ public class FindProductsTest {
 			Pages.homePage().tryClosePopup();
 			Assert.assertTrue(Pages.homePage().isAt());
 		} catch (Exception e) {
+			System.out.println(e.getMessage());
 			Assert.fail(e.getMessage());
 		}
 	}
@@ -39,6 +41,7 @@ public class FindProductsTest {
 	public void canSearchProduct() {
 		try {
 			this.canGoToHomePage();
+			Browser.switchToDefaultContet();
 			Pages.homePage().doSearch("iphone");
 			Pages.resultsPage().tryClosePopup();
 			Assert.assertTrue(Pages.resultsPage().isListTypeButtonPresent());
@@ -65,10 +68,14 @@ public class FindProductsTest {
 		try {
 			this.canGoTo2ndResultsPage();
 			Pages.resultsPage().clickNthResult(2);
+//			if(Browser.selectedBrowser == BrowserType.FIREFOX) Browser.close();
+			Browser.switchToDefaultContet();
+			Browser.switchToActiveElement();
 			Browser.switchToTab(1);
 			Integer available = Pages.productPage().getAvaliableItems();
 			Assert.assertTrue(available > 1);
 		} catch (Exception e) {
+			System.out.println(e.getMessage());
 			Assert.fail(e.getMessage());
 		}
 	}

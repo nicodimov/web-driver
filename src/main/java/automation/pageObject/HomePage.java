@@ -46,8 +46,7 @@ public class HomePage {
 		Thread.sleep(1000);
 	}
 
-	public void doSearch(String searchText) {
-		Browser.driver.switchTo().parentFrame();
+	public void doSearch(String searchText) throws InterruptedException {
 		this.searchBox.sendKeys(searchText);
 		this.searchButton.click();
 	}

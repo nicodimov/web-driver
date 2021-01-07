@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="automation.find2ndProduct.FindProductsTest" time="32.398" errors="0" skipped="0">
+<testsuite tests="4" failures="3" name="automation.find2ndProduct.FindProductsTest" time="69.622" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/jre/lib"/>
@@ -47,7 +47,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -65,8 +65,603 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="automation.find2ndProduct.FindProductsTest" name="canSearchProduct" time="8.094"/>
-  <testcase classname="automation.find2ndProduct.FindProductsTest" name="canGoToHomePage" time="5.648"/>
-  <testcase classname="automation.find2ndProduct.FindProductsTest" name="canGoTo2ndResultsPage" time="8.069"/>
-  <testcase classname="automation.find2ndProduct.FindProductsTest" name="SecondProductShouldHaveAtLeastOneItem" time="10.587"/>
+  <testcase classname="automation.find2ndProduct.FindProductsTest" name="canSearchProduct" time="16.503">
+    <failure message="Browsing context has been discarded
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Nicolass-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:cc4:a7d1:7066:3034%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, capabilities: {desiredCapabilities: {acceptInsecureCerts: true, browserName: firefox}}, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:headless: false, moz:processID: 5918, moz:profile: /var/folders/wb/2d203m113sj..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e5c3fee5-1042-9445-aee9-590b2b988b4c
+*** Element info: {Using=id, value=search-key}" type="java.lang.AssertionError">java.lang.AssertionError: Browsing context has been discarded
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Nicolass-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:cc4:a7d1:7066:3034%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, capabilities: {desiredCapabilities: {acceptInsecureCerts: true, browserName: firefox}}, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:headless: false, moz:processID: 5918, moz:profile: /var/folders/wb/2d203m113sj..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e5c3fee5-1042-9445-aee9-590b2b988b4c
+*** Element info: {Using=id, value=search-key}
+	at org.junit.Assert.fail(Assert.java:89)
+	at automation.find2ndProduct.FindProductsTest.canSearchProduct(FindProductsTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-err>1609951271635	geckodriver	INFO	geckodriver 0.21.0
+1609951271641	geckodriver	INFO	Listening on 127.0.0.1:48799
+1609951271838	mozrunner::runner	INFO	Running command: &quot;/Applications/Firefox.app/Contents/MacOS/firefox-bin&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/var/folders/wb/2d203m113sjbcm1gs3v9hqmw0000gq/T/rust_mozprofile.liv2IE6jFP32&quot;
+1609951272333	Marionette	TRACE	Marionette enabled
+1609951272408	Marionette	TRACE	Received observer notification toplevel-window-ready
+1609951273967	Marionette	TRACE	Received observer notification marionette-startup-requested
+1609951273967	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1609951273986	Marionette	TRACE	All scripts recorded.
+1609951273986	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1609951273986	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1609951273986	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1609951273986	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1609951273986	Marionette	DEBUG	Setting recommended pref browser.newtabpage.enabled to false
+1609951273987	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1609951273988	Marionette	DEBUG	Setting recommended pref browser.search.update to false
+1609951273988	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1609951273988	Marionette	DEBUG	Setting recommended pref browser.tabs.remote.separatePrivilegedContentProcess to false
+1609951273988	Marionette	DEBUG	Setting recommended pref browser.tabs.unloadOnLowMemory to false
+1609951273988	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1609951273988	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnOpen to false
+1609951273988	Marionette	DEBUG	Setting recommended pref browser.toolbars.bookmarks.visibility to never
+1609951273988	Marionette	DEBUG	Setting recommended pref browser.usedOnWindows10.introURL to 
+1609951273988	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1609951273989	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1609951273990	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1609951273990	Marionette	DEBUG	Setting recommended pref dom.disable_open_during_load to false
+1609951273990	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1609951273990	Marionette	DEBUG	Setting recommended pref dom.max_chrome_script_run_time to 0
+1609951273990	Marionette	DEBUG	Setting recommended pref dom.max_script_run_time to 0
+1609951273991	Marionette	DEBUG	Setting recommended pref dom.push.connection.enabled to false
+1609951273991	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1609951273991	Marionette	DEBUG	Setting recommended pref extensions.getAddons.discovery.api_url to data:, 
+1609951273991	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1609951273991	Marionette	DEBUG	Setting recommended pref privacy.trackingprotection.enabled to false
+1609951273991	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1609951273991	Marionette	DEBUG	Setting recommended pref security.fileuri.strict_origin_policy to false
+1609951273991	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1609951273991	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1609951273992	Marionette	DEBUG	Setting recommended pref signon.rememberSignons to false
+1609951273994	Marionette	INFO	Listening on port 63025
+1609951273995	Marionette	DEBUG	Marionette is listening
+1609951274088	Marionette	DEBUG	Remote agent not available for this build and platform
+1609951274089	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:63057
+1609951274094	Marionette	DEBUG	0 -&gt; [0,1,&quot;WebDriver:NewSession&quot;,{&quot;acceptInsecureCerts&quot;:true,&quot;browserName&quot;:&quot;firefox&quot;,&quot;capabilities&quot;:{&quot;desiredCapabilities&quot;:{&quot;acceptInsecureCerts&quot;:true,&quot;browserName&quot;:&quot;firefox&quot;}}}]
+1609951274095	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609951274102	Marionette	TRACE	[19] Frame script loaded
+1609951274112	Marionette	DEBUG	0 &lt;- [1,1,null,{&quot;sessionId&quot;:&quot;e5c3fee5-1042-9445-aee9-590b2b988b4c&quot;,&quot;capabilities&quot;:{&quot;browserName&quot;:&quot;firefox&quot;,&quot;browserVersion&quot;:&quot;84.0. ... alse,&quot;moz:webdriverClick&quot;:true,&quot;capabilities&quot;:{&quot;desiredCapabilities&quot;:{&quot;acceptInsecureCerts&quot;:true,&quot;browserName&quot;:&quot;firefox&quot;}}}}]
+Jan 06, 2021 1:41:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1609951274170	Marionette	DEBUG	0 -&gt; [0,2,&quot;WebDriver:Navigate&quot;,{&quot;url&quot;:&quot;http://www.aliexpress.com&quot;}]
+1609951274173	Marionette	TRACE	[19] MarionetteCommands actor created for window id 4294967297
+1609951274177	Marionette	TRACE	[19] MarionetteEvents actor created for window id 4294967297
+1609951274178	Marionette	TRACE	Received event beforeunload for about:blank
+1609951274733	Marionette	TRACE	Received event pagehide for about:blank
+1609951274885	Marionette	TRACE	[4294967297] MarionetteEvents actor created for window id 4294967300
+1609951275403	Marionette	TRACE	[19] MarionetteEvents actor created for window id 4294967298
+1609951275403	Marionette	TRACE	Received event DOMContentLoaded for https://www.aliexpress.com/
+1609951275832	Marionette	TRACE	[4294967298] MarionetteEvents actor created for window id 4294967302
+1609951275887	Marionette	TRACE	[4294967298] MarionetteEvents actor created for window id 4294967303
+JavaScript warning: https://aeis.alicdn.com/AWSC/WebUMID/1.76.2/um.js?d=6, line 1: WebGL context was lost.
+JavaScript warning: https://assets.alicdn.com/g/secdev/sufei_data/3.9.5/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://assets.alicdn.com/g??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js, line 5: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.1/et_n.js, line 4: WebGL context was lost.
+1609951276853	Marionette	TRACE	[4294967299] MarionetteEvents actor created for window id 4294967305
+1609951276992	Marionette	TRACE	[4294967299] MarionetteEvents actor created for window id 4294967306
+JavaScript warning: https://assets.alicdn.com/g/secdev/sufei_data/3.9.5/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.1/et_n.js, line 4: WebGL context was lost.
+JavaScript warning: https://assets.alicdn.com/g??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js, line 5: WebGL context was lost.
+1609951277265	Marionette	TRACE	[4294967300] MarionetteEvents actor created for window id 4294967308
+1609951285023	Marionette	TRACE	Received event pageshow for https://www.aliexpress.com/
+1609951285023	Marionette	DEBUG	0 &lt;- [1,2,null,{&quot;value&quot;:null}]
+1609951285050	Marionette	DEBUG	0 -&gt; [0,3,&quot;WebDriver:ExecuteScript&quot;,{&quot;args&quot;:[],&quot;newSandbox&quot;:false,&quot;script&quot;:&quot;return document.readyState&quot;,&quot;scriptTimeout&quot;:null,&quot;specialPowers&quot;:false}]
+1609951285051	Marionette	TRACE	[19] MarionetteCommands actor created for window id 4294967298
+1609951285053	Marionette	DEBUG	0 &lt;- [1,3,null,{&quot;value&quot;:&quot;complete&quot;}]
+1609951286065	Marionette	DEBUG	0 -&gt; [0,4,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/iframe[2]&quot;}]
+1609951286070	Marionette	DEBUG	0 &lt;- [1,4,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;281c3ca9-f906-a244-982d-9294b4faf8be&quot;}}]
+1609951286076	Marionette	DEBUG	0 -&gt; [0,5,&quot;WebDriver:SwitchToFrame&quot;,{&quot;element&quot;:&quot;281c3ca9-f906-a244-982d-9294b4faf8be&quot;}]
+1609951286079	Marionette	DEBUG	0 &lt;- [1,5,null,{&quot;value&quot;:null}]
+1609951286085	Marionette	DEBUG	0 -&gt; [0,6,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951286085	Marionette	TRACE	[4294967299] MarionetteCommands actor created for window id 4294967306
+1609951286087	Marionette	DEBUG	0 &lt;- [1,6,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;3f777081-2b88-2e43-9441-f87c23c79a73&quot;}}]
+1609951286116	Marionette	DEBUG	0 -&gt; [0,7,&quot;WebDriver:ExecuteScript&quot;,{&quot;args&quot;:[{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;3f777081-2b88-2e43-9441-f87c23c79a73&quot;}],&quot;newS ... dow!=&apos;undefined&apos;?window.document:null}, arguments);}\n).apply(null, arguments);&quot;,&quot;scriptTimeout&quot;:null,&quot;specialPowers&quot;:false}]
+1609951286126	Marionette	DEBUG	0 &lt;- [1,7,null,{&quot;value&quot;:true}]
+1609951286131	Marionette	DEBUG	0 -&gt; [0,8,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951286133	Marionette	DEBUG	0 &lt;- [1,8,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;3f777081-2b88-2e43-9441-f87c23c79a73&quot;}}]
+1609951286137	Marionette	DEBUG	0 -&gt; [0,9,&quot;WebDriver:IsElementEnabled&quot;,{&quot;id&quot;:&quot;3f777081-2b88-2e43-9441-f87c23c79a73&quot;}]
+1609951286144	Marionette	DEBUG	0 &lt;- [1,9,null,{&quot;value&quot;:true}]
+1609951286149	Marionette	DEBUG	0 -&gt; [0,10,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951286150	Marionette	DEBUG	0 &lt;- [1,10,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;3f777081-2b88-2e43-9441-f87c23c79a73&quot;}}]
+1609951286154	Marionette	DEBUG	0 -&gt; [0,11,&quot;WebDriver:ElementClick&quot;,{&quot;id&quot;:&quot;3f777081-2b88-2e43-9441-f87c23c79a73&quot;}]
+1609951286180	Marionette	TRACE	Received DOM event click for [object HTMLImageElement]
+1609951286185	Marionette	TRACE	[4294967299] MarionetteEvents actor created for window id 4294967306
+1609951286185	Marionette	TRACE	Received event pagehide for https://campaign.aliexpress.com/wow/gcp/f38135ee10a049f88d67359094a77f48_1609731889730?__poplayer_position_sign=pc_homepage&amp;__prefix=&amp;__poplayer_preserve_uuid=31544&amp;parentSpmB=home
+1609951286191	Marionette	TRACE	[4294967300] MarionetteEvents actor created for window id 4294967308
+1609951286193	Marionette	TRACE	Canceled page load listener because frame with id 4294967299 has been removed
+1609951286193	Marionette	DEBUG	0 &lt;- [1,11,null,{&quot;value&quot;:null}]
+1609951286199	Marionette	DEBUG	0 -&gt; [0,12,&quot;WebDriver:GetTitle&quot;,{}]
+1609951286200	Marionette	DEBUG	0 &lt;- [1,12,null,{&quot;value&quot;:&quot;AliExpress - Online Shopping for Popular Electronics, Fashion, Home &amp; Garden, Toys &amp; Sports, Automobiles and More products - AliExpress&quot;}]
+1609951287210	Marionette	DEBUG	0 -&gt; [0,13,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;css selector&quot;,&quot;value&quot;:&quot;#search\\-key&quot;}]
+1609951287211	Marionette	DEBUG	0 &lt;- [1,13,{&quot;error&quot;:&quot;no such window&quot;,&quot;message&quot;:&quot;Browsing context has been discarded&quot;,&quot;stacktrace&quot;:&quot;WebDriverError@chrome://marione ... t@chrome://marionette/content/server.js:241:9\n_onJSONObjectReady/&lt;@chrome://marionette/content/transport.js:504:20\n&quot;},null]
+1609951287231	Marionette	DEBUG	0 -&gt; [0,14,&quot;WebDriver:CloseWindow&quot;,{}]
+1609951287232	Marionette	DEBUG	0 &lt;- [1,14,null,[]]
+1609951287233	Marionette	DEBUG	0 -&gt; [0,15,&quot;Marionette:Quit&quot;,{&quot;flags&quot;:[&quot;eForceQuit&quot;]}]
+1609951287233	Marionette	INFO	Stopped listening on port 63025
+1609951287262	Marionette	TRACE	Received observer notification quit-application
+1609951287265	Marionette	DEBUG	0 &lt;- [1,15,null,{&quot;cause&quot;:&quot;shutdown&quot;}]
+1609951287324	Marionette	DEBUG	Closed connection 0
+1609951287417	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1609951287417	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1609951287417	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1609951287417	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1609951287417	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.newtabpage.enabled
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.search.update
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnOpen
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.toolbars.bookmarks.visibility
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.usedOnWindows10.introURL
+1609951287418	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1609951287419	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1609951287419	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1609951287419	Marionette	DEBUG	Resetting recommended pref dom.disable_open_during_load
+1609951287419	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1609951287419	Marionette	DEBUG	Resetting recommended pref dom.max_chrome_script_run_time
+1609951287419	Marionette	DEBUG	Resetting recommended pref dom.max_script_run_time
+1609951287419	Marionette	DEBUG	Resetting recommended pref dom.push.connection.enabled
+1609951287419	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1609951287420	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.discovery.api_url
+1609951287420	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1609951287420	Marionette	DEBUG	Resetting recommended pref privacy.trackingprotection.enabled
+1609951287420	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1609951287420	Marionette	DEBUG	Resetting recommended pref security.fileuri.strict_origin_policy
+1609951287420	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1609951287420	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1609951287421	Marionette	DEBUG	Resetting recommended pref signon.rememberSignons
+1609951287421	Marionette	DEBUG	Marionette stopped listening
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+</system-err>
+  </testcase>
+  <testcase classname="automation.find2ndProduct.FindProductsTest" name="canGoToHomePage" time="32.668"/>
+  <testcase classname="automation.find2ndProduct.FindProductsTest" name="canGoTo2ndResultsPage" time="7.682">
+    <failure message="Browsing context has been discarded
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Nicolass-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:cc4:a7d1:7066:3034%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, capabilities: {desiredCapabilities: {acceptInsecureCerts: true, browserName: firefox}}, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:headless: false, moz:processID: 5930, moz:profile: /var/folders/wb/2d203m113sj..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f2652c2f-627f-d247-984c-04fdd878eac4
+*** Element info: {Using=id, value=search-key}" type="java.lang.AssertionError">java.lang.AssertionError: Browsing context has been discarded
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Nicolass-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:cc4:a7d1:7066:3034%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, capabilities: {desiredCapabilities: {acceptInsecureCerts: true, browserName: firefox}}, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:headless: false, moz:processID: 5930, moz:profile: /var/folders/wb/2d203m113sj..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f2652c2f-627f-d247-984c-04fdd878eac4
+*** Element info: {Using=id, value=search-key}
+	at org.junit.Assert.fail(Assert.java:89)
+	at automation.find2ndProduct.FindProductsTest.canSearchProduct(FindProductsTest.java:46)
+	at automation.find2ndProduct.FindProductsTest.canGoTo2ndResultsPage(FindProductsTest.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-err>1609951320458	geckodriver	INFO	geckodriver 0.21.0
+1609951320463	geckodriver	INFO	Listening on 127.0.0.1:3041
+1609951320475	mozrunner::runner	INFO	Running command: &quot;/Applications/Firefox.app/Contents/MacOS/firefox-bin&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/var/folders/wb/2d203m113sjbcm1gs3v9hqmw0000gq/T/rust_mozprofile.BF9ChuoCCG2s&quot;
+1609951320956	Marionette	TRACE	Marionette enabled
+1609951321031	Marionette	TRACE	Received observer notification toplevel-window-ready
+1609951322582	Marionette	TRACE	Received observer notification marionette-startup-requested
+1609951322582	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1609951322600	Marionette	TRACE	All scripts recorded.
+1609951322600	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1609951322600	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1609951322600	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1609951322600	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1609951322600	Marionette	DEBUG	Setting recommended pref browser.newtabpage.enabled to false
+1609951322601	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1609951322602	Marionette	DEBUG	Setting recommended pref browser.search.update to false
+1609951322602	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1609951322602	Marionette	DEBUG	Setting recommended pref browser.tabs.remote.separatePrivilegedContentProcess to false
+1609951322602	Marionette	DEBUG	Setting recommended pref browser.tabs.unloadOnLowMemory to false
+1609951322602	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1609951322602	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnOpen to false
+1609951322602	Marionette	DEBUG	Setting recommended pref browser.toolbars.bookmarks.visibility to never
+1609951322602	Marionette	DEBUG	Setting recommended pref browser.usedOnWindows10.introURL to 
+1609951322602	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1609951322603	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1609951322603	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1609951322603	Marionette	DEBUG	Setting recommended pref dom.disable_open_during_load to false
+1609951322603	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1609951322603	Marionette	DEBUG	Setting recommended pref dom.max_chrome_script_run_time to 0
+1609951322603	Marionette	DEBUG	Setting recommended pref dom.max_script_run_time to 0
+1609951322604	Marionette	DEBUG	Setting recommended pref dom.push.connection.enabled to false
+1609951322604	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1609951322604	Marionette	DEBUG	Setting recommended pref extensions.getAddons.discovery.api_url to data:, 
+1609951322604	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1609951322604	Marionette	DEBUG	Setting recommended pref privacy.trackingprotection.enabled to false
+1609951322604	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1609951322604	Marionette	DEBUG	Setting recommended pref security.fileuri.strict_origin_policy to false
+1609951322605	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1609951322605	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1609951322606	Marionette	DEBUG	Setting recommended pref signon.rememberSignons to false
+1609951322607	Marionette	INFO	Listening on port 63424
+1609951322608	Marionette	DEBUG	Marionette is listening
+1609951322622	Marionette	DEBUG	Remote agent not available for this build and platform
+1609951322623	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:63453
+1609951322628	Marionette	DEBUG	0 -&gt; [0,1,&quot;WebDriver:NewSession&quot;,{&quot;acceptInsecureCerts&quot;:true,&quot;browserName&quot;:&quot;firefox&quot;,&quot;capabilities&quot;:{&quot;desiredCapabilities&quot;:{&quot;acceptInsecureCerts&quot;:true,&quot;browserName&quot;:&quot;firefox&quot;}}}]
+1609951322629	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609951322635	Marionette	TRACE	[19] Frame script loaded
+1609951322645	Marionette	DEBUG	0 &lt;- [1,1,null,{&quot;sessionId&quot;:&quot;f2652c2f-627f-d247-984c-04fdd878eac4&quot;,&quot;capabilities&quot;:{&quot;browserName&quot;:&quot;firefox&quot;,&quot;browserVersion&quot;:&quot;84.0. ... alse,&quot;moz:webdriverClick&quot;:true,&quot;capabilities&quot;:{&quot;desiredCapabilities&quot;:{&quot;acceptInsecureCerts&quot;:true,&quot;browserName&quot;:&quot;firefox&quot;}}}}]
+Jan 06, 2021 1:42:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1609951322656	Marionette	DEBUG	0 -&gt; [0,2,&quot;WebDriver:Navigate&quot;,{&quot;url&quot;:&quot;http://www.aliexpress.com&quot;}]
+1609951322660	Marionette	TRACE	[19] MarionetteCommands actor created for window id 4294967297
+1609951322664	Marionette	TRACE	[19] MarionetteEvents actor created for window id 4294967297
+1609951322665	Marionette	TRACE	Received event beforeunload for about:blank
+1609951323241	Marionette	TRACE	Received event pagehide for about:blank
+1609951323426	Marionette	TRACE	[4294967297] MarionetteEvents actor created for window id 4294967300
+1609951323744	Marionette	TRACE	[19] MarionetteEvents actor created for window id 4294967298
+1609951323745	Marionette	TRACE	Received event DOMContentLoaded for https://www.aliexpress.com/
+1609951324267	Marionette	TRACE	[4294967298] MarionetteEvents actor created for window id 4294967302
+1609951324324	Marionette	TRACE	[4294967298] MarionetteEvents actor created for window id 4294967303
+JavaScript warning: https://aeis.alicdn.com/AWSC/WebUMID/1.76.2/um.js?d=6, line 1: WebGL context was lost.
+1609951324918	Marionette	TRACE	Received event pageshow for https://www.aliexpress.com/
+1609951324918	Marionette	DEBUG	0 &lt;- [1,2,null,{&quot;value&quot;:null}]
+1609951324926	Marionette	DEBUG	0 -&gt; [0,3,&quot;WebDriver:ExecuteScript&quot;,{&quot;args&quot;:[],&quot;newSandbox&quot;:false,&quot;script&quot;:&quot;return document.readyState&quot;,&quot;scriptTimeout&quot;:null,&quot;specialPowers&quot;:false}]
+1609951324948	Marionette	TRACE	[19] MarionetteCommands actor created for window id 4294967298
+1609951324950	Marionette	DEBUG	0 &lt;- [1,3,null,{&quot;value&quot;:&quot;complete&quot;}]
+JavaScript warning: https://assets.alicdn.com/g/secdev/sufei_data/3.9.5/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.1/et_n.js, line 4: WebGL context was lost.
+JavaScript warning: https://assets.alicdn.com/g??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js, line 5: WebGL context was lost.
+JavaScript warning: https://assets.alicdn.com/g/secdev/sufei_data/3.9.5/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.1/et_n.js, line 4: WebGL context was lost.
+JavaScript warning: https://assets.alicdn.com/g??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js, line 5: WebGL context was lost.
+1609951325959	Marionette	DEBUG	0 -&gt; [0,4,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/iframe[2]&quot;}]
+1609951325966	Marionette	DEBUG	0 &lt;- [1,4,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;38028539-3b04-1a4f-81b3-c1a2fde82afa&quot;}}]
+1609951325970	Marionette	DEBUG	0 -&gt; [0,5,&quot;WebDriver:SwitchToFrame&quot;,{&quot;element&quot;:&quot;38028539-3b04-1a4f-81b3-c1a2fde82afa&quot;}]
+1609951325972	Marionette	DEBUG	0 &lt;- [1,5,null,{&quot;value&quot;:null}]
+1609951325978	Marionette	DEBUG	0 -&gt; [0,6,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951325979	Marionette	TRACE	[4294967299] MarionetteCommands actor created for window id 4294967308
+1609951325980	Marionette	DEBUG	0 &lt;- [1,6,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;ab713c57-dc25-8548-a39c-7cbcc7df3618&quot;}}]
+1609951325989	Marionette	DEBUG	0 -&gt; [0,7,&quot;WebDriver:ExecuteScript&quot;,{&quot;args&quot;:[{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;ab713c57-dc25-8548-a39c-7cbcc7df3618&quot;}],&quot;newS ... dow!=&apos;undefined&apos;?window.document:null}, arguments);}\n).apply(null, arguments);&quot;,&quot;scriptTimeout&quot;:null,&quot;specialPowers&quot;:false}]
+1609951325996	Marionette	DEBUG	0 &lt;- [1,7,null,{&quot;value&quot;:false}]
+1609951326505	Marionette	DEBUG	0 -&gt; [0,8,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951326507	Marionette	DEBUG	0 &lt;- [1,8,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;ab713c57-dc25-8548-a39c-7cbcc7df3618&quot;}}]
+1609951326517	Marionette	DEBUG	0 -&gt; [0,9,&quot;WebDriver:ExecuteScript&quot;,{&quot;args&quot;:[{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;ab713c57-dc25-8548-a39c-7cbcc7df3618&quot;}],&quot;newS ... dow!=&apos;undefined&apos;?window.document:null}, arguments);}\n).apply(null, arguments);&quot;,&quot;scriptTimeout&quot;:null,&quot;specialPowers&quot;:false}]
+1609951326525	Marionette	DEBUG	0 &lt;- [1,9,null,{&quot;value&quot;:true}]
+1609951326530	Marionette	DEBUG	0 -&gt; [0,10,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951326531	Marionette	DEBUG	0 &lt;- [1,10,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;ab713c57-dc25-8548-a39c-7cbcc7df3618&quot;}}]
+1609951326533	Marionette	DEBUG	0 -&gt; [0,11,&quot;WebDriver:IsElementEnabled&quot;,{&quot;id&quot;:&quot;ab713c57-dc25-8548-a39c-7cbcc7df3618&quot;}]
+1609951326541	Marionette	DEBUG	0 &lt;- [1,11,null,{&quot;value&quot;:true}]
+1609951326545	Marionette	DEBUG	0 -&gt; [0,12,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951326546	Marionette	DEBUG	0 &lt;- [1,12,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;ab713c57-dc25-8548-a39c-7cbcc7df3618&quot;}}]
+1609951326550	Marionette	DEBUG	0 -&gt; [0,13,&quot;WebDriver:ElementClick&quot;,{&quot;id&quot;:&quot;ab713c57-dc25-8548-a39c-7cbcc7df3618&quot;}]
+1609951326572	Marionette	TRACE	Received DOM event click for [object HTMLImageElement]
+1609951326574	Marionette	TRACE	[4294967299] MarionetteEvents actor created for window id 4294967308
+1609951326574	Marionette	TRACE	Received event pagehide for https://campaign.aliexpress.com/wow/gcp/f38135ee10a049f88d67359094a77f48_1609731889730?__poplayer_position_sign=pc_homepage&amp;__prefix=&amp;__poplayer_preserve_uuid=31544&amp;parentSpmB=home
+1609951326576	Marionette	TRACE	[4294967301] MarionetteEvents actor created for window id 4294967310
+1609951326577	Marionette	TRACE	Canceled page load listener because frame with id 4294967299 has been removed
+1609951326578	Marionette	DEBUG	0 &lt;- [1,13,null,{&quot;value&quot;:null}]
+1609951326581	Marionette	DEBUG	0 -&gt; [0,14,&quot;WebDriver:GetTitle&quot;,{}]
+1609951326581	Marionette	DEBUG	0 &lt;- [1,14,null,{&quot;value&quot;:&quot;AliExpress - Online Shopping for Popular Electronics, Fashion, Home &amp; Garden, Toys &amp; Sports, Automobiles and More products - AliExpress&quot;}]
+1609951327589	Marionette	DEBUG	0 -&gt; [0,15,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;css selector&quot;,&quot;value&quot;:&quot;#search\\-key&quot;}]
+1609951327589	Marionette	DEBUG	0 &lt;- [1,15,{&quot;error&quot;:&quot;no such window&quot;,&quot;message&quot;:&quot;Browsing context has been discarded&quot;,&quot;stacktrace&quot;:&quot;WebDriverError@chrome://marione ... t@chrome://marionette/content/server.js:241:9\n_onJSONObjectReady/&lt;@chrome://marionette/content/transport.js:504:20\n&quot;},null]
+1609951327595	Marionette	DEBUG	0 -&gt; [0,16,&quot;WebDriver:CloseWindow&quot;,{}]
+1609951327595	Marionette	DEBUG	0 &lt;- [1,16,null,[]]
+1609951327597	Marionette	DEBUG	0 -&gt; [0,17,&quot;Marionette:Quit&quot;,{&quot;flags&quot;:[&quot;eForceQuit&quot;]}]
+1609951327597	Marionette	INFO	Stopped listening on port 63424
+1609951327625	Marionette	TRACE	Received observer notification quit-application
+1609951327627	Marionette	DEBUG	0 &lt;- [1,17,null,{&quot;cause&quot;:&quot;shutdown&quot;}]
+1609951327695	Marionette	DEBUG	Closed connection 0
+1609951327781	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1609951327781	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1609951327781	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1609951327781	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1609951327781	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1609951327781	Marionette	DEBUG	Resetting recommended pref browser.newtabpage.enabled
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.search.update
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnOpen
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.toolbars.bookmarks.visibility
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.usedOnWindows10.introURL
+1609951327782	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1609951327782	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1609951327782	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1609951327783	Marionette	DEBUG	Resetting recommended pref dom.disable_open_during_load
+1609951327783	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1609951327783	Marionette	DEBUG	Resetting recommended pref dom.max_chrome_script_run_time
+1609951327783	Marionette	DEBUG	Resetting recommended pref dom.max_script_run_time
+1609951327783	Marionette	DEBUG	Resetting recommended pref dom.push.connection.enabled
+1609951327783	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1609951327783	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.discovery.api_url
+1609951327783	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1609951327783	Marionette	DEBUG	Resetting recommended pref privacy.trackingprotection.enabled
+1609951327783	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1609951327783	Marionette	DEBUG	Resetting recommended pref security.fileuri.strict_origin_policy
+1609951327783	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1609951327783	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1609951327783	Marionette	DEBUG	Resetting recommended pref signon.rememberSignons
+1609951327784	Marionette	DEBUG	Marionette stopped listening
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+</system-err>
+  </testcase>
+  <testcase classname="automation.find2ndProduct.FindProductsTest" name="SecondProductShouldHaveAtLeastOneItem" time="12.769">
+    <failure message="Browsing context has been discarded
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Nicolass-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:cc4:a7d1:7066:3034%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, capabilities: {desiredCapabilities: {acceptInsecureCerts: true, browserName: firefox}}, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:headless: false, moz:processID: 5935, moz:profile: /var/folders/wb/2d203m113sj..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bc2d0b88-459d-b94a-8f18-9be0629ea0e4
+*** Element info: {Using=id, value=search-key}" type="java.lang.AssertionError">java.lang.AssertionError: Browsing context has been discarded
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Nicolass-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:cc4:a7d1:7066:3034%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, capabilities: {desiredCapabilities: {acceptInsecureCerts: true, browserName: firefox}}, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:headless: false, moz:processID: 5935, moz:profile: /var/folders/wb/2d203m113sj..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bc2d0b88-459d-b94a-8f18-9be0629ea0e4
+*** Element info: {Using=id, value=search-key}
+	at org.junit.Assert.fail(Assert.java:89)
+	at automation.find2ndProduct.FindProductsTest.canSearchProduct(FindProductsTest.java:46)
+	at automation.find2ndProduct.FindProductsTest.canGoTo2ndResultsPage(FindProductsTest.java:53)
+	at automation.find2ndProduct.FindProductsTest.SecondProductShouldHaveAtLeastOneItem(FindProductsTest.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-err>1609951328120	geckodriver	INFO	geckodriver 0.21.0
+1609951328126	geckodriver	INFO	Listening on 127.0.0.1:23894
+1609951328137	mozrunner::runner	INFO	Running command: &quot;/Applications/Firefox.app/Contents/MacOS/firefox-bin&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/var/folders/wb/2d203m113sjbcm1gs3v9hqmw0000gq/T/rust_mozprofile.9bMWhQJiqDx9&quot;
+1609951328608	Marionette	TRACE	Marionette enabled
+1609951328683	Marionette	TRACE	Received observer notification toplevel-window-ready
+1609951330238	Marionette	TRACE	Received observer notification marionette-startup-requested
+1609951330239	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1609951330247	Marionette	TRACE	All scripts recorded.
+1609951330247	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1609951330247	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1609951330247	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1609951330248	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1609951330248	Marionette	DEBUG	Setting recommended pref browser.newtabpage.enabled to false
+1609951330249	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1609951330249	Marionette	DEBUG	Setting recommended pref browser.search.update to false
+1609951330249	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1609951330249	Marionette	DEBUG	Setting recommended pref browser.tabs.remote.separatePrivilegedContentProcess to false
+1609951330249	Marionette	DEBUG	Setting recommended pref browser.tabs.unloadOnLowMemory to false
+1609951330249	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1609951330249	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnOpen to false
+1609951330249	Marionette	DEBUG	Setting recommended pref browser.toolbars.bookmarks.visibility to never
+1609951330250	Marionette	DEBUG	Setting recommended pref browser.usedOnWindows10.introURL to 
+1609951330250	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1609951330250	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1609951330251	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1609951330251	Marionette	DEBUG	Setting recommended pref dom.disable_open_during_load to false
+1609951330251	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1609951330251	Marionette	DEBUG	Setting recommended pref dom.max_chrome_script_run_time to 0
+1609951330251	Marionette	DEBUG	Setting recommended pref dom.max_script_run_time to 0
+1609951330252	Marionette	DEBUG	Setting recommended pref dom.push.connection.enabled to false
+1609951330252	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1609951330252	Marionette	DEBUG	Setting recommended pref extensions.getAddons.discovery.api_url to data:, 
+1609951330252	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1609951330252	Marionette	DEBUG	Setting recommended pref privacy.trackingprotection.enabled to false
+1609951330252	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1609951330252	Marionette	DEBUG	Setting recommended pref security.fileuri.strict_origin_policy to false
+1609951330252	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1609951330252	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1609951330253	Marionette	DEBUG	Setting recommended pref signon.rememberSignons to false
+1609951330255	Marionette	INFO	Listening on port 63619
+1609951330256	Marionette	DEBUG	Marionette is listening
+1609951330292	Marionette	DEBUG	Remote agent not available for this build and platform
+1609951330292	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:63649
+1609951330299	Marionette	DEBUG	0 -&gt; [0,1,&quot;WebDriver:NewSession&quot;,{&quot;acceptInsecureCerts&quot;:true,&quot;browserName&quot;:&quot;firefox&quot;,&quot;capabilities&quot;:{&quot;desiredCapabilities&quot;:{&quot;acceptInsecureCerts&quot;:true,&quot;browserName&quot;:&quot;firefox&quot;}}}]
+1609951330300	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609951330306	Marionette	TRACE	[19] Frame script loaded
+1609951330316	Marionette	DEBUG	0 &lt;- [1,1,null,{&quot;sessionId&quot;:&quot;bc2d0b88-459d-b94a-8f18-9be0629ea0e4&quot;,&quot;capabilities&quot;:{&quot;browserName&quot;:&quot;firefox&quot;,&quot;browserVersion&quot;:&quot;84.0. ... alse,&quot;moz:webdriverClick&quot;:true,&quot;capabilities&quot;:{&quot;desiredCapabilities&quot;:{&quot;acceptInsecureCerts&quot;:true,&quot;browserName&quot;:&quot;firefox&quot;}}}}]
+Jan 06, 2021 1:42:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1609951330329	Marionette	DEBUG	0 -&gt; [0,2,&quot;WebDriver:Navigate&quot;,{&quot;url&quot;:&quot;http://www.aliexpress.com&quot;}]
+1609951330332	Marionette	TRACE	[19] MarionetteCommands actor created for window id 4294967297
+1609951330336	Marionette	TRACE	[19] MarionetteEvents actor created for window id 4294967297
+1609951330336	Marionette	TRACE	Received event beforeunload for about:blank
+1609951330900	Marionette	TRACE	Received event pagehide for about:blank
+1609951331059	Marionette	TRACE	[4294967297] MarionetteEvents actor created for window id 4294967300
+1609951331333	Marionette	TRACE	[19] MarionetteEvents actor created for window id 4294967298
+1609951331334	Marionette	TRACE	Received event DOMContentLoaded for https://www.aliexpress.com/
+1609951331939	Marionette	TRACE	[4294967298] MarionetteEvents actor created for window id 4294967302
+1609951331987	Marionette	TRACE	[4294967298] MarionetteEvents actor created for window id 4294967303
+JavaScript warning: https://aeis.alicdn.com/AWSC/WebUMID/1.76.2/um.js?d=6, line 1: WebGL context was lost.
+JavaScript warning: https://assets.alicdn.com/g/secdev/sufei_data/3.9.5/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://assets.alicdn.com/g??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js, line 5: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.1/et_n.js, line 4: WebGL context was lost.
+1609951332669	Marionette	TRACE	[4294967299] MarionetteEvents actor created for window id 4294967305
+1609951332815	Marionette	TRACE	[4294967299] MarionetteEvents actor created for window id 4294967306
+JavaScript warning: https://assets.alicdn.com/g/secdev/sufei_data/3.9.5/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.1/et_n.js, line 4: WebGL context was lost.
+JavaScript warning: https://assets.alicdn.com/g??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js, line 5: WebGL context was lost.
+1609951333064	Marionette	TRACE	[4294967300] MarionetteEvents actor created for window id 4294967308
+1609951338197	Marionette	TRACE	Received event pageshow for https://www.aliexpress.com/
+1609951338198	Marionette	DEBUG	0 &lt;- [1,2,null,{&quot;value&quot;:null}]
+1609951338205	Marionette	DEBUG	0 -&gt; [0,3,&quot;WebDriver:ExecuteScript&quot;,{&quot;args&quot;:[],&quot;newSandbox&quot;:false,&quot;script&quot;:&quot;return document.readyState&quot;,&quot;scriptTimeout&quot;:null,&quot;specialPowers&quot;:false}]
+1609951338206	Marionette	TRACE	[19] MarionetteCommands actor created for window id 4294967298
+1609951338208	Marionette	DEBUG	0 &lt;- [1,3,null,{&quot;value&quot;:&quot;complete&quot;}]
+1609951339216	Marionette	DEBUG	0 -&gt; [0,4,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/iframe[2]&quot;}]
+1609951339223	Marionette	DEBUG	0 &lt;- [1,4,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;84b8fb14-d951-d541-bf7c-ba1909b4663c&quot;}}]
+1609951339228	Marionette	DEBUG	0 -&gt; [0,5,&quot;WebDriver:SwitchToFrame&quot;,{&quot;element&quot;:&quot;84b8fb14-d951-d541-bf7c-ba1909b4663c&quot;}]
+1609951339230	Marionette	DEBUG	0 &lt;- [1,5,null,{&quot;value&quot;:null}]
+1609951339234	Marionette	DEBUG	0 -&gt; [0,6,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951339235	Marionette	TRACE	[4294967299] MarionetteCommands actor created for window id 4294967306
+1609951339236	Marionette	DEBUG	0 &lt;- [1,6,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;246931ad-5ef7-dc42-aab4-03f239f1d839&quot;}}]
+1609951339246	Marionette	DEBUG	0 -&gt; [0,7,&quot;WebDriver:ExecuteScript&quot;,{&quot;args&quot;:[{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;246931ad-5ef7-dc42-aab4-03f239f1d839&quot;}],&quot;newS ... dow!=&apos;undefined&apos;?window.document:null}, arguments);}\n).apply(null, arguments);&quot;,&quot;scriptTimeout&quot;:null,&quot;specialPowers&quot;:false}]
+1609951339255	Marionette	DEBUG	0 &lt;- [1,7,null,{&quot;value&quot;:true}]
+1609951339260	Marionette	DEBUG	0 -&gt; [0,8,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951339261	Marionette	DEBUG	0 &lt;- [1,8,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;246931ad-5ef7-dc42-aab4-03f239f1d839&quot;}}]
+1609951339263	Marionette	DEBUG	0 -&gt; [0,9,&quot;WebDriver:IsElementEnabled&quot;,{&quot;id&quot;:&quot;246931ad-5ef7-dc42-aab4-03f239f1d839&quot;}]
+1609951339272	Marionette	DEBUG	0 &lt;- [1,9,null,{&quot;value&quot;:true}]
+1609951339276	Marionette	DEBUG	0 -&gt; [0,10,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;/html/body/section/div/div/div/div/div[2]/div/div/img&quot;}]
+1609951339277	Marionette	DEBUG	0 &lt;- [1,10,null,{&quot;value&quot;:{&quot;element-6066-11e4-a52e-4f735466cecf&quot;:&quot;246931ad-5ef7-dc42-aab4-03f239f1d839&quot;}}]
+1609951339281	Marionette	DEBUG	0 -&gt; [0,11,&quot;WebDriver:ElementClick&quot;,{&quot;id&quot;:&quot;246931ad-5ef7-dc42-aab4-03f239f1d839&quot;}]
+1609951339306	Marionette	TRACE	Received DOM event click for [object HTMLImageElement]
+1609951339308	Marionette	TRACE	[4294967299] MarionetteEvents actor created for window id 4294967306
+1609951339309	Marionette	TRACE	Received event pagehide for https://campaign.aliexpress.com/wow/gcp/f38135ee10a049f88d67359094a77f48_1609731889730?__poplayer_position_sign=pc_homepage&amp;__prefix=&amp;__poplayer_preserve_uuid=31544&amp;parentSpmB=home
+1609951339315	Marionette	TRACE	[4294967300] MarionetteEvents actor created for window id 4294967308
+1609951339318	Marionette	TRACE	Canceled page load listener because frame with id 4294967299 has been removed
+1609951339318	Marionette	DEBUG	0 &lt;- [1,11,null,{&quot;value&quot;:null}]
+1609951339323	Marionette	DEBUG	0 -&gt; [0,12,&quot;WebDriver:GetTitle&quot;,{}]
+1609951339323	Marionette	DEBUG	0 &lt;- [1,12,null,{&quot;value&quot;:&quot;AliExpress - Online Shopping for Popular Electronics, Fashion, Home &amp; Garden, Toys &amp; Sports, Automobiles and More products - AliExpress&quot;}]
+1609951340333	Marionette	DEBUG	0 -&gt; [0,13,&quot;WebDriver:FindElement&quot;,{&quot;using&quot;:&quot;css selector&quot;,&quot;value&quot;:&quot;#search\\-key&quot;}]
+1609951340334	Marionette	DEBUG	0 &lt;- [1,13,{&quot;error&quot;:&quot;no such window&quot;,&quot;message&quot;:&quot;Browsing context has been discarded&quot;,&quot;stacktrace&quot;:&quot;WebDriverError@chrome://marione ... t@chrome://marionette/content/server.js:241:9\n_onJSONObjectReady/&lt;@chrome://marionette/content/transport.js:504:20\n&quot;},null]
+1609951340340	Marionette	DEBUG	0 -&gt; [0,14,&quot;WebDriver:CloseWindow&quot;,{}]
+1609951340340	Marionette	DEBUG	0 &lt;- [1,14,null,[]]
+1609951340341	Marionette	DEBUG	0 -&gt; [0,15,&quot;Marionette:Quit&quot;,{&quot;flags&quot;:[&quot;eForceQuit&quot;]}]
+1609951340341	Marionette	INFO	Stopped listening on port 63619
+1609951340371	Marionette	TRACE	Received observer notification quit-application
+1609951340374	Marionette	DEBUG	0 &lt;- [1,15,null,{&quot;cause&quot;:&quot;shutdown&quot;}]
+1609951340451	Marionette	DEBUG	Closed connection 0
+1609951340538	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1609951340538	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1609951340538	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1609951340538	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1609951340538	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1609951340538	Marionette	DEBUG	Resetting recommended pref browser.newtabpage.enabled
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.search.update
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnOpen
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.toolbars.bookmarks.visibility
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.usedOnWindows10.introURL
+1609951340539	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1609951340539	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1609951340540	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1609951340540	Marionette	DEBUG	Resetting recommended pref dom.disable_open_during_load
+1609951340540	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1609951340540	Marionette	DEBUG	Resetting recommended pref dom.max_chrome_script_run_time
+1609951340540	Marionette	DEBUG	Resetting recommended pref dom.max_script_run_time
+1609951340540	Marionette	DEBUG	Resetting recommended pref dom.push.connection.enabled
+1609951340540	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1609951340540	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.discovery.api_url
+1609951340540	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1609951340540	Marionette	DEBUG	Resetting recommended pref privacy.trackingprotection.enabled
+1609951340540	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1609951340540	Marionette	DEBUG	Resetting recommended pref security.fileuri.strict_origin_policy
+1609951340540	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1609951340540	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1609951340540	Marionette	DEBUG	Resetting recommended pref signon.rememberSignons
+1609951340541	Marionette	DEBUG	Marionette stopped listening
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+</system-err>
+  </testcase>
 </testsuite>
