@@ -15,7 +15,8 @@ public class FindProductsTest {
 	
 	@BeforeClass
 	public static void init() {
-		System.setProperty("webdriver.chrome.driver","../chromedriver");
+		System.setProperty("webdriver.chrome.driver","chromedriver");
+		System.setProperty("webdriver.gecko.driver", "geckodriver");
 	}
 	
 	@Before
@@ -67,7 +68,7 @@ public class FindProductsTest {
 		try {
 			this.canGoTo2ndResultsPage();
 			Pages.resultsPage().clickNthResult(2);
-			if(Browser.selectedBrowser == BrowserType.FIREFOX) Browser.close();
+//			if(Browser.selectedBrowser == BrowserType.FIREFOX) Browser.close();
 			Browser.switchToDefaultContet();
 			Browser.switchToActiveElement();
 			Browser.switchToTab(1);
