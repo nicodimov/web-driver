@@ -15,12 +15,12 @@ public class ProductPage {
 	@FindBy(how = How.CSS, using = ".product-quantity-tip > span")
 	WebElement itemsAvailableDiv;
 	
-//	@FindBy(how = How.CLASS_NAME, using = ".next-btn.next-large.next-btn-primary.buynow")
-//	WebElement buyButton;
+	@FindBy(how = How.CSS, using = ".next-btn.next-large.next-btn-primary.buynow")
+	WebElement buyButton;
 	
 	public Integer getAvaliableItems() {
+		waitForBuyButtonClickeable();
 		String items = "";
-//		String innerHtml = Browser.driver.findElement(By.cssSelector(".product-quantity-tip > span")).getText();
 		System.out.println("Current Tab URL: " + Browser.driver.getCurrentUrl());
 		String innerHtml = itemsAvailableDiv.getText();
 		Pattern p = Pattern.compile("[0-9]+");
@@ -29,5 +29,14 @@ public class ProductPage {
 		    items += m.group();
 		}
 		return Integer.parseInt(items);
+	}
+	
+	public void waitForBuyButtonClickeable() {	
+		try {	
+			WebDriverWait wait = new WebDriverWait(Browser.driver, 3);	
+			wait.until(ExpectedConditions.elementToBeClickable(this.buyButton));	
+		} catch (Exception e) {	
+			System.out.println("Cannot find button: " + e.getMessage());	
+		}	
 	}
 }

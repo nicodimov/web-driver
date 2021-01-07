@@ -88,7 +88,7 @@ public class FindProductsTest {
 	@AfterClass
 	public static void cleanUp() {
 		try {
-			Browser.close();
+			Browser.quit();
 		} catch (Exception e) {
 			// do nothing
 		}
